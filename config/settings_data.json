@@ -371,11 +371,62 @@
           "video_title": "",
           "text_size": "medium"
         }
+      },
+      "1653636181ac64cff1": {
+        "type": "image-wrapper",
+        "blocks": {
+          "1653636181ac64cff1-0": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "imgColumn_image": "shopify:\/\/shop_images\/pexels-olia-danilevich-8964938_2.jpg",
+              "imgColumn_title": "Add a title",
+              "imgColumn_text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "imgColumn_button_text": "A Name of the product or page",
+              "imgColumnbutton_label": "Write down text of this button",
+              "imgColumn_button_link": ""
+            }
+          },
+          "1653636181ac64cff1-1": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": true,
+              "imgColumn_image": "shopify:\/\/shop_images\/pexels-pnw-production-8981315_55266b03-e19a-4b77-8a85-cea8400d2ab9.jpg",
+              "imgColumn_title": "Add a title",
+              "imgColumn_text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "imgColumn_button_text": "A Name of the product or page",
+              "imgColumnbutton_label": "Write down text of this button",
+              "imgColumn_button_link": ""
+            }
+          },
+          "1653636181ac64cff1-2": {
+            "type": "text_block",
+            "settings": {
+              "enable_image": false,
+              "imgColumn_image": "shopify:\/\/shop_images\/pexels-koolshooters-8534441_2_32882263-26eb-4233-aa8b-943ad9850c1f.jpg",
+              "imgColumn_title": "Add a title",
+              "imgColumn_text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "imgColumn_button_text": "A Name of the product or page",
+              "imgColumnbutton_label": "Write down text of this button",
+              "imgColumn_button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1653636181ac64cff1-0",
+          "1653636181ac64cff1-1",
+          "1653636181ac64cff1-2"
+        ],
+        "settings": {
+          "wrapper-title": "Text columns with images",
+          "wrap_align_text": "left"
+        }
       }
     },
     "content_for_index": [
       "165036010358310713",
       "hero-1",
+      "1653636181ac64cff1",
       "feature-columns",
       "165205985346336852",
       "feature-row",
