@@ -1,0 +1,108 @@
+body {
+    box-sizing: border-box;
+}
+
+
+@keyframes appearBtn {
+    from {
+        bottom: -26%;
+    }
+    to{
+        bottom: 0%;
+    }
+}
+
+
+.no_img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    background: #e8e8e8;
+    text-align: center;
+    padding-top: 88px;
+    color: gray;
+}
+
+.slice_wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 580px;
+    margin-bottom: 100px;
+}
+
+.img_slice {
+    /* display: inline-block; */
+    position:relative;
+    vertical-align: top;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.img_slice_bg {
+    height: 100%;
+}
+.img_slice_bg > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slice_block {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    color:#fff;
+}
+
+.slice_block h4 {
+    color: #fff;
+    font-family: Times New Roman;
+    font-size: 40px;
+    line-height: normal;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.slice_block > p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.slice_btn_bg {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 30%;
+    padding-left: 20px;
+    padding-bottom: 9%;
+    background: linear-gradient(360deg, rgb(0 94 70), transparent);
+    display: none;
+    animation-name: appearBtn;
+    animation-duration: 1.3s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.img_slice:hover .slice_btn_bg {
+    display: block;
+}
+
+.slice_btn {
+    margin-top: 30px;
+}
+.prd_name {
+    margin: 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.imgColumn_btn {
+    height: 60px;
+    background: #fff;
+    color: rgb(0 94 70);
+    font-size: 21px;
+}

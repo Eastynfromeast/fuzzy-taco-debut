@@ -1,0 +1,141 @@
+{{'section-image-wrapper.css' | asset_url | stylesheet_tag}}
+
+{% if section.settings.wrapper-title != blank %}
+    <div class="wrapper_title">
+        <h2>
+            {{section.settings.wrapper-title}}
+        </h2>
+    </div>
+{% endif %}
+
+
+{% if section.settings.blocks != 0 %}
+    <ul class="slice_wrapper">
+        {% for block in section.blocks %}
+            <li class="img_slice">
+                <div class="img_slice_bg">
+                {% if block.settings.imgColumn_image == blank %}
+                    <div class="no_img">
+                        Please insert an image through image picker.
+                    </div>
+                {% else %}
+                    <img src="{{ block.settings.imgColumn_image | img_url }}" />
+                {% endif %}
+                </div> 
+                <div class="slice_block">
+                    <h4>{{ block.settings.imgColumn_title }}</h4>
+                    <p>{{ block.settings.imgColumn_text }}</p>
+                </div>
+                {% if block.settings.imgColumnbutton_label != ""%}
+                    <div class="slice_btn_bg">
+                        <div class="slice_btn">
+                            {% if block.settings. imgColumn_button_text != blank %}
+                                <p class="prd_name"> {{block.settings.imgColumn_button_text}}</p>
+                            {% endif %}
+                            <a href="{{ block.settings.imgColumn_button_link }}" class="imgColumn_btn button">
+                                {{ block.settings.imgColumnbutton_label }}
+                            </a>
+                        </div> 
+                    </div>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endif %}
+
+
+{% schema %}
+{
+    "name": "Image Wrap",
+    "settings": [
+    {
+        "type": "text",
+        "id": "wrapper-title",
+        "label": "Wrapper Heading",
+        "default": "Text columns with images"
+    },
+    {
+        "type": "select",
+        "id": "wrap_align_text",
+        "label": "Text alignment",
+        "default": "left",
+        "options": [
+        {
+            "value": "left",
+            "label": "Left"
+        },
+        {
+            "value": "center",
+            "label": "Centered"
+        }
+        ]
+    }
+    ],
+    "blocks": [
+    {
+        "type": "text_block",
+        "name": "Img Column",
+        "settings": [
+            {
+                "type": "checkbox",
+                "id": "enable_image",
+                "label":"Column Show image",
+                "default": true
+            },
+            {
+                "type": "image_picker",
+                "id": "imgColumn_image",
+                "label": "Image on Image Column"
+            },
+            {
+                "type": "text",
+                "id": "imgColumn_title",
+                "label":"Heading",
+                "default": "Add a title"
+            },
+            {
+                "type": "richtext",
+                "id": "imgColumn_text",
+                "label": "Text",
+                "default":"<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>"
+            },
+            {
+                "type": "text",
+                "id": "imgColumn_button_text",
+                "label": "A Name of the product or page",
+                "default": "A Name of the product or page"
+            },
+            {
+                "type": "text",
+                "id": "imgColumnbutton_label",
+                "label": "Button label",
+                "default": "Write down text of this button"
+            },
+            {
+                "type": "url",
+                "id": "imgColumn_button_link",
+                "label": "Button link"
+            }
+        ]
+    }
+],
+"presets": [
+    {
+        "name": "Image Wrapper",
+        "category": "Main",
+        "blocks": [
+        {
+            "type": "text_block"
+        },
+        {
+            "type": "text_block"
+        },
+        {
+            "type": "text_block"
+        }
+        ]
+    }
+]
+}
+{% endschema %}
