@@ -1,0 +1,53 @@
+<div class="page-width">
+  <div class="grid">
+    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+      <div class="section-header text-center">
+        <h1>{{ page.title }}</h1>
+      </div>
+      
+        <div class="writingTxt">
+           <p>
+			 Editting templates for shopify is so hard :(
+           </p>
+         </div>
+
+       <main class="main-content js-focus-hidden" id="MainContent" role="main" tabindex="-1">
+      	{{ content_for_layout }}
+         
+         <div class="rte">
+           {{ page.content }}
+			
+         </div>
+         
+
+       </main>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  
+  h1 {
+  	font-size: 48px;
+    font-weight: bold;
+    color: rgb(105,117,7);
+  }
+  .rte { 
+  	max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+    border: 1px solid red;
+  }
+  
+  .writingTxt {
+    background: black;
+    color: #fff; 
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+  .writingTxt > p {
+   color: #fff;
+    font-size: 24px;
+  }
+<style>
